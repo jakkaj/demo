@@ -1,1 +1,1 @@
-﻿FROM microsoft/dotnet:onbuild
+FROM microsoft/dotnet:onbuild
