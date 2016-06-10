@@ -1,9 +1,0 @@
-version: '2'
-
-services:
-  demoapp:
-    build:
-      context: ..
-      dockerfile: app/dockerfile
-    ports:
-      - "80:80"
