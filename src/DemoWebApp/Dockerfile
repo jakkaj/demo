@@ -1,10 +1,10 @@
-FROM jakkaj/jakkajtest
+FROM microsoft/dotnet
 
 COPY . /app
 WORKDIR /app
 
-RUN ["dnu", "restore"]
+RUN ["dotnet", "restore"]
 
-EXPOSE 8080
+EXPOSE 5000
 
-ENTRYPOINT ["dnx", "web"]
+ENTRYPOINT ["dotnet", "run"]
