@@ -1,14 +1,17 @@
-FROM microsoft/dotnet:1.0.0-rc2-core
-
+FROM microsoft/dotnet
+COPY . /app
 # Set the Working Directory
 WORKDIR /app
+
+RUN ["dotnet", "restore"]
+
 
 # Configure the listening port to 80
 ENV ASPNETCORE_URLS http://*:80
 EXPOSE 80
 
 # Copy the app
-COPY /app /app
+
 
 # Start the app
-ENTRYPOINT dotnet DemoApp.dll
+ENTRYPOINT ["dotnet", "run"]
